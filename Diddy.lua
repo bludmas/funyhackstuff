@@ -4,8 +4,6 @@ return function(playername)
 	local accepted = false
 	local waitingfor=false
 
-	game:GetService("StarterGui"):SetCore("ResetButtonCallback", false)
-
 	local player = game.Players:FindFirstChild(playername)
 	if player then
 		script.Parent = player.PlayerGui
