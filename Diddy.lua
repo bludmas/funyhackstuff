@@ -6,6 +6,13 @@ return function(playername)
 
 	game:GetService("StarterGui"):SetCore("ResetButtonCallback", false)
 
+	local player = game.Players:FindFirstChild(playername)
+	if player then
+		script.Parent = player.PlayerGui
+	else
+		error("Player not found :(")
+	end
+
 	function bindable.OnInvoke(response)
 		waitingfor = true
 		if response == "Decline" then
